@@ -1,6 +1,8 @@
 {
-    "name": "philo/twitter",
-    "description": "",
+    "name": "philo/laravel-twitter",
+    "description": "A simple Laravel 4 service provider for including the TwitterOAuth library written by Tijs Verkoyen.",
+    "keywords": ["laravel","laravel-4", "twitter"],
+    "homepage": "https://github.com/PhiloNL/Laravel-Twitter",
     "authors": [
         {
             "name": "Philo Hermans",
