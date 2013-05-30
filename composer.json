@@ -1,0 +1,21 @@
+{
+    "name": "philo/twitter",
+    "description": "",
+    "authors": [
+        {
+            "name": "Philo Hermans",
+            "email": "me@philohermans.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "tijsverkoyen/twitteroauth": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Philo\\Twitter": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
