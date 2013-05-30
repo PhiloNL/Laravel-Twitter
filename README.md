@@ -1,7 +1,7 @@
 TwitterOAuth Service Provider for Laravel 4
 ===============
 
-A simple Laravel 4 service provider for including the TwitterOAuth library written by [Tijs Verkoyen](https://github.com/tijsverkoyen/TwitterOAuth).
+A simple Laravel 4 service provider for including the [TwitterOAuth](https://github.com/tijsverkoyen/TwitterOAuth) library.
 
 ### Installation
 
@@ -72,10 +72,10 @@ You need to register that route and catch the verifier token:
 ```php
 // Redirect back from Twitter to http://site.com/twitter-auth
 Route::get('/twitter-auth', function(){
-    // Token
+    // Oauth token
     $token = Input::get('oauth_token');
 
-    // Verifier ID
+    // Verifier token
     $verifier = Input::get('oauth_verifier');
 
     // Request access token
