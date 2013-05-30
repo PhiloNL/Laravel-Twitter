@@ -5,7 +5,7 @@ A simple Laravel 4 service provider for including the TwitterOAuth library writt
 
 ### Installation
 
-The TwitterOAuth Service Provider can be installed via Composer by requiring the `"philo/laravel-twitter": "dev-master"` package and setting the minimum-stability to dev (required for Laravel 4) in your project's composer.json.
+The TwitterOAuth Service Provider can be installed via Composer by requiring the `"philo/laravel-twitter": "dev-master"` package in your project's composer.json.
 
 ```php
 {
