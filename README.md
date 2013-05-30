@@ -49,3 +49,48 @@ And do the same for the alias:
 	'Twitter' => 'Philo\Twitter\Facades\Twitter',
 )
 ```
+
+### Usage
+
+In order to access the API you need your user to authorize your application. To do so the user needs to be redirected to Twitter.
+
+```php
+// Visit http://site.com/twitter-redirect
+Route::get('twitter-redirect', function(){
+    // Reqest tokens
+    $tokens = Twitter::oAuthRequestToken();
+
+    // Redirect to twitter
+    Twitter::oAuthAuthorize(array_get($tokens, 'oauth_token'));
+    exit;
+});
+```
+
+Once the user has authorized your app he/she is going to be redirect back to the callback URL you defined in your Twitter application settings.
+You need to register that route and catch the verifier token:
+
+```php
+// Redirect back from Twitter to http://site.com/twitter-auth
+Route::get('/twitter-auth', function(){
+    // Token
+    $token = Input::get('oauth_token');
+
+    // Verifier ID
+    $verifier = Input::get('oauth_verifier');
+
+    // Request access token
+    $accessToken = Twitter::oAuthAccessToken($token, $verifier);
+});
+```
+
+Twitter will respond with the information that looks like:
+
+```
+array (size=4)
+  'oauth_token' => string 'WFkvKyUG6K4-Vqntts8U4xQFzNHgNEAFTFMPxHH6fvQYwYsbuu' (length=50)
+  'oauth_token_secret' => string 'RfVY4hwV7JeKe9WeQqpMUjLqZvKhZuhKp2wmN3MsKM' (length=43)
+  'user_id' => string '123456789' (length=8)
+  'screen_name' => string 'Philo01' (length=7)
+```
+
+You should store this information in order to access the authorized user in the future.
