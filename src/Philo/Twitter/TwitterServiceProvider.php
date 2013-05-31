@@ -1,7 +1,6 @@
 <?php namespace Philo\Twitter;
 
 use Illuminate\Support\ServiceProvider;
-use Config;
 
 class TwitterServiceProvider extends ServiceProvider {
 
@@ -11,7 +10,6 @@ class TwitterServiceProvider extends ServiceProvider {
 	 * @var bool
 	 */
 	protected $defer = false;
-
 
 	/**
 	 * Boot the service provider.
