@@ -3,6 +3,7 @@
 	"description": "A simple Laravel 4 service provider for including the TwitterOAuth library.",
 	"keywords": ["laravel","laravel-4", "twitter"],
 	"homepage": "https://github.com/PhiloNL/Laravel-Twitter",
+	"license": "BSD",
 	"authors": [
 		{
 			"name": "Philo Hermans",
@@ -12,7 +13,7 @@
 	"repositories": [
 	   {
 	     "type": "vcs",
-	     "url": "https://github.com/PhiloNL/TwitterOAuth"
+	     "url": "https://github.com/philonl/twitteroauth"
 	   }
 	],
 	"require": {
