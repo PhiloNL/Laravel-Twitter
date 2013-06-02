@@ -13,7 +13,7 @@
 	"repositories": [
 	   {
 	     "type": "vcs",
-	     "url": "https://github.com/philonl/twitteroauth"
+	     "url": "https://github.com/PhiloNL/TwitterOAuth"
 	   }
 	],
 	"require": {
