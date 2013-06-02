@@ -9,6 +9,12 @@ The TwitterOAuth Service Provider can be installed via Composer by requiring the
 
 ```php
 {
+    "repositories": [
+        {
+	         "type": "vcs",
+	         "url": "https://github.com/PhiloNL/TwitterOAuth"
+        }
+    ],
     "require": {
         "laravel/framework": "4.0.*",
         "philo/laravel-twitter": "dev-master"
