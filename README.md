@@ -100,3 +100,25 @@ array (size=4)
 ```
 
 You should store this information in order to access the authorized user in the future.
+Please look at the source of `/vendor/tijsverkoyen/TijsVerkoyen/Twitter/Twitter.php` for all available methods.
+
+***Example***
+```php
+try{
+	$oAuth = User::find(1); // Get the tokens and twitter user_id you saved in the previous step
+
+	// Setup OAuth token and secret
+	Twitter::setOAuthToken($oAuth->oauth_token);
+	Twitter::setOAuthTokenSecret($oAuth->oauth_token_secret);
+
+	// Get tweets
+	$timeline = Twitter::statusesUserTimeline($oAuth->user_id);
+	
+	// Display tweets
+	dd($timeline);
+
+}  catch(Exception $e) {
+	// Error
+	echo $e->getMessage();
+}
+```
