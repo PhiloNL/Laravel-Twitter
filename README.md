@@ -5,16 +5,10 @@ A simple Laravel 4 service provider for including the [TwitterOAuth](https://git
 
 ### Installation
 
-The TwitterOAuth Service Provider can be installed via Composer by requiring the `"philo/laravel-twitter": "dev-master"` package in your project's composer.json and adding the forked repository of TwitterOAuth.
+The TwitterOAuth Service Provider can be installed via Composer by requiring the `"philo/laravel-twitter": "dev-master"` package in your project's composer.json.
 
 ```php
 {
-    "repositories": [
-        {
-	         "type": "vcs",
-	         "url": "https://github.com/PhiloNL/TwitterOAuth"
-        }
-    ],
     "require": {
         "laravel/framework": "4.0.*",
         "philo/laravel-twitter": "dev-master"
@@ -113,7 +107,7 @@ try{
 
 	// Get tweets
 	$timeline = Twitter::statusesUserTimeline($oAuth->user_id);
-	
+
 	// Display tweets
 	dd($timeline);
 

@@ -10,12 +10,6 @@
 			"email": "me@philohermans.com"
 		}
 	],
-	"repositories": [
-	   {
-	     "type": "vcs",
-	     "url": "https://github.com/PhiloNL/TwitterOAuth"
-	   }
-	],
 	"require": {
 		"php": ">=5.3.0",
 		"illuminate/support": "4.0.x",
