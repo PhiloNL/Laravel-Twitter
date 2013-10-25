@@ -61,7 +61,7 @@ Route::get('twitter-redirect', function(){
     $tokens = Twitter::oAuthRequestToken();
 
     // Redirect to twitter
-    Twitter::oAuthAuthorize(array_get($tokens, 'oauth_token'));
+    Twitter::oAuthAuthenticate(array_get($tokens, 'oauth_token'));
     exit;
 });
 ```
