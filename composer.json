@@ -13,12 +13,13 @@
 	"require": {
 		"php": ">=5.3.0",
 		"illuminate/support": "4.x",
-		"tijsverkoyen/twitteroauth": "master@dev"
+		"tijsverkoyen/twitteroauth": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {
 			"Philo\\Twitter": "src/"
 		}
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"prefer-stable": false
 }
